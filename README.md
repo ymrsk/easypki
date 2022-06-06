@@ -71,7 +71,7 @@ crl_cert, crl_key = private_pki.make_crl(
 
 
 # save file
-# 格納した変数とファイル名を指定してください
+# Please specify the stored variable and file name
 with open('ca_cert.pem','wb') as f:
     f.write(ca_cert)
 ```
