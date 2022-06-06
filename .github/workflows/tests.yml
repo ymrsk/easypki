@@ -23,4 +23,11 @@ jobs:
       - name: Install Dependencies
         run: poetry install --no-interaction
       - name: Run Tests
-        run: poetry run pytest --cov=easypki -v ./tests/test* --cov-report=html
+        run: poetry run pytest --cov=./ --cov-report=xml
+      - name: Upload coverage to Codecov
+        if: ${{ matrix.python-version==3.6 }}
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage.xml
+          name: codecov-umbrella
+          fail_ci_if_error: true
