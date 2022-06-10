@@ -1,19 +1,21 @@
 [tool.poetry]
 name = "easypki"
-version = "0.1.0"
+version = "0.0.1"
 description = "Build a self-signed pki"
 authors = ["ymrsk"]
+homepage = "https://github.com/ymrsk/easypki"
+repository = "https://github.com/ymrsk/easypki"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"
 cryptography = "^37.0.1"
-click = "8.0.4"
-loguru = "^0.6.0"
 typing-extensions = "4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 flake8 = "^4.0.1"
+pytest-cov = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
